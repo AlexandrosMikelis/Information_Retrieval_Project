@@ -146,14 +146,14 @@ def all_user_ratings_search(uid, isbn):
 if __name__ == "__main__":
 
     print("Searching on index: bx-books.")
-    print("You can search any field and value. Program ends with field input 'END'\n")
+    print("You can search any field and value. Program ends with user_id input 'END'\n")
 
     while True:
         user_id = input("Give me a user_id(uid): ")
-        field = input("Give me a field: ")
-        if (field == 'END'):
+        if (user_id == 'END'):
             print("Program exiting.")
             break
+        field = input("Give me a field: ")
         value = input("Give me a value: ")
         results = basic_search(field, value)
 
